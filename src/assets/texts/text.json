@@ -1,0 +1,78 @@
+[
+  {
+    "nombre": {
+      "es": "Angel Herrera",
+      "en": "Angel Herrera"
+    },
+    "presentacion": {
+      "es": "¡Hola! Soy Angel, un apasionado desarrollador web full stack graduado del bootcamp de Academlo de programación. Mi misión es crear experiencias digitales asombrosas y funcionales que impacten positivamente en la vida de las personas.",
+      "en": "Hello! I'm Angel, a passionate full-stack web developer recently graduated from a programming bootcamp of Academlo. My mission is to create amazing and functional digital experiences that positively impact people's lives."
+    },
+    "quienSoy": {
+      "es": "Soy un entusiasta del código y un solucionador de problemas creativo. Durante mi tiempo en el bootcamp, me sumergí en el desarrollo web full stack, adquiriendo habilidades sólidas en tecnologías como HTML, CSS, JavaScript, Node.js, Express y bases de datos como PostgreSQL. Mi enfoque es trabajar tanto en el frontend como en el backend para construir aplicaciones web completas y efectivas.",
+      "en": "I'm a code enthusiast and a creative problem solver. During my time in the bootcamp, I immersed myself in full-stack web development, gaining solid skills in technologies like HTML, CSS, JavaScript, Node.js, Express, and databases like PostgreSQL. My focus is on working both on the frontend and backend to build comprehensive and effective web applications."
+    },
+    "porQueYo": {
+      "es": "Mi enfoque orientado a resultados y mi habilidad para aprender rápidamente me permiten abordar nuevos desafíos con confianza. Estoy constantemente buscando oportunidades para mejorar mis habilidades y seguir aprendiendo en un entorno colaborativo.",
+      "en": "My results-oriented approach and ability to learn quickly enable me to tackle new challenges with confidence. I'm constantly seeking opportunities to enhance my skills and continue learning in a collaborative environment."
+    },
+    "proyectosDestacados": [
+      {
+        "nombre": {
+          "es": "Rick y Morty",
+          "en": "Rick and Morty"
+        },
+        "descripcion": {
+          "es": "Este proyecto fue react, consumio la API de rick y morty con axios de donde se obtiene la información.",
+          "en": "This project was react, it consumed the rick and morty API with axios from where the information is obtained."
+        }
+      },
+      {
+        "nombre": {
+          "es": "Pokedex",
+          "en": "Pokedex"
+        },
+        "descripcion": {
+          "es": "Este proyecto lo realizamos con react, se utilizaron herramientas del framework como redux, axios, react-routerdom, se consumio la PokeApi de donde obtuvimos la información de los pokemons.",
+          "en": "This project was done with react, we used framework tools such as redux, axios, react-routerdom, we consumed the PokeApi from where we obtained the information of the pokemons."
+        }
+      },
+      {
+        "nombre": {
+          "es": "Ecommerce",
+          "en": "Ecommerce"
+        },
+        "descripcion": {
+          "es": "Este proyecto lo realizamos con react, se utilizaron herramientas del framework como redux, axios, react-routerdom y se utilizo también bootstrap, se consumio una API propia de academlo de donde obtuvimos la información de los productos, compras, carrito de compras y la información del usuario.",
+          "en": "This project was done with react, we used framework tools such as redux, axios, react-routerdom and also bootstrap, we used academlo's own API from where we obtained the information of the products, purchases, shopping cart and user information."
+        }
+      }
+    ],
+    "habilidadesTecnicas": {
+      "frontend": {
+        "es": ["HTML", "CSS", "JavaScript", "React.js"],
+        "en": ["HTML", "CSS", "JavaScript", "React.js"]
+      },
+      "backend": {
+        "es": ["Node.js", "Express.js", "PostgreSQL"],
+        "en": ["Node.js", "Express.js", "PostgreSQL"]
+      },
+      "herramientasYOtros": {
+        "es": ["Git", "RESTful APIs", "Control de Versiones"],
+        "en": ["Git", "RESTful APIs", "Version Control"]
+      }
+    },
+    "queBusco": {
+      "es": "Estoy emocionado por la oportunidad de contribuir a un equipo dinámico y colaborativo donde pueda aplicar mis habilidades recién adquiridas y seguir creciendo como desarrollador. Mi enfoque centrado en el usuario, combinado con mi pasión por la programación, me convierten en un candidato ideal para proyectos desafiantes y estimulantes.",
+      "en": "I'm excited about the opportunity to contribute to a dynamic and collaborative team where I can apply my newly acquired skills and continue to grow as a developer. My user-centered approach, combined with my passion for programming, make me an ideal candidate for challenging and stimulating projects."
+    },
+    "hablemos": {
+      "es": "Estoy abierto a nuevas oportunidades y colaboraciones. Si estás buscando a alguien con iniciativa, motivación y habilidades técnicas sólidas, ¡me encantaría conocerte! Puedes encontrar más detalles sobre mis proyectos en mi portfolio y contactarme a través de correo electronico o linkedin.",
+      "en": "I'm open to new opportunities and collaborations. If you're looking for someone with initiative, motivation, and solid technical skills, I'd love to connect! You can find more details about my projects on my portfolio and contact me through email or linkedin."
+    },
+    "agradecimiento": {
+      "es": "Gracias por visitar mi portfolio. ¡Espero con ansias la oportunidad de contribuir a tu equipo y crecer juntos en el emocionante mundo del desarrollo web!",
+      "en": "Thank you for visiting my portfolio. I look forward to the opportunity to contribute to your team and grow together in the exciting world of web development!"
+    }
+  }
+]
