@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ecommerceReact from "../assets/imgs/ecommerce-react.png";
 import ecommerceJs from "../assets/imgs/ecommerce-js-vanilla.png";
 import pokedex from "../assets/imgs/pokedex.png";
@@ -14,6 +14,16 @@ const Modal = ({ modal, setModal, imgToShow, setImgToShow }) => {
     }, "980")
   }
   
+  useEffect(() => {
+    if (modal === true) {
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          hide();
+        }
+      });
+    }
+  }, [modal]);
+
   const imgArray = [ecommerceReact, ecommerceJs, pokedex, rickAndMorty];
   const urls = [
     "https://libre-mercadeo.netlify.app/",
@@ -39,11 +49,11 @@ const Modal = ({ modal, setModal, imgToShow, setImgToShow }) => {
     <div className="galery visible" id="modal">
       <i className="bx bx-x close-btn" onClick={() => hide()}></i>
       <div className="galery-container">
-        <p className="circle-img" onClick={() => modifyImg("-")}>{`<`}</p>
+        <p className="btn-galery-minus" onClick={() => modifyImg("-")}>{`-`}</p>
         <a href={urls[imgToShow]} target="_blank">
           <img src={imgArray[imgToShow]} alt="" className="galery-img" />
         </a>
-        <p className="circle-img" onClick={() => modifyImg("+")}>{`>`}</p>
+        <p className="btn-galery-plus" onClick={() => modifyImg("+")}>{`+`}</p>
       </div>
       <div className="previews">
         {imgArray.map((img) => (

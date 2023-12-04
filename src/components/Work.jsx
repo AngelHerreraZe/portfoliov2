@@ -9,21 +9,39 @@ const Work = () => {
   const [modal, setModal] = useState(false);
   const [imgToShow, setImgToShow] = useState(0);
   const imgArray = [ecommerceReact, ecommerceJs, pokedex, rickAndMorty];
+  const imgTitle = [
+    "Ecommerce React",
+    "Ecommerce JS vanilla",
+    "Pokedex",
+    "Rick and Morty",
+  ];
 
   const imgClicked = (img) => {
     setModal(true);
-    setImgToShow(img)
-  }
+    setImgToShow(img);
+  };
 
   if (modal) {
-    return <Modal modal={modal} setModal={setModal} imgToShow={imgToShow} setImgToShow={setImgToShow}/>;
+    return (
+      <Modal
+        modal={modal}
+        setModal={setModal}
+        imgToShow={imgToShow}
+        setImgToShow={setImgToShow}
+      />
+    );
   } else {
     return (
       <div className="work-content">
         {imgArray.map((img) => (
           <div className="relative" key={imgArray.indexOf(img)}>
-          <img src={img} alt="" className="card" onClick={() => imgClicked(imgArray.indexOf(img))}/>
-        </div>
+            <img
+              src={img}
+              alt=""
+              className="card"
+              onClick={() => imgClicked(imgArray.indexOf(img))}
+            />
+          </div>
         ))}
       </div>
     );
