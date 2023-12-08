@@ -5,24 +5,30 @@ import pokedex from "../assets/imgs/pokedex.png";
 import rickAndMorty from "../assets/imgs/rick-morty.png";
 
 const Modal = ({ modal, setModal, imgToShow, setImgToShow }) => {
-
   const hide = () => {
-    let modal = document.getElementById('modal');
-    modal.classList.add('hidden');
+    let modal = document.getElementById("modal");
+    modal.classList.add("hidden");
     setTimeout(() => {
-      setModal(false)
-    }, "980")
-  }
-  
-  useEffect(() => {
-    if (modal === true) {
-      document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
-          hide();
-        }
-      });
+      setModal(false);
+    }, "980");
+  };
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      hide();
     }
-  }, [modal]);
+    if (event.key === "ArrowRight") {
+      setImgToShow(++imgToShow);
+      if (imgToShow === 4) {
+        setImgToShow(0);
+      }
+    } else if (event.key === "ArrowLeft") {
+      setImgToShow(--imgToShow);
+      if (imgToShow === -1) {
+        setImgToShow(3);
+      }
+    }
+  });
 
   const imgArray = [ecommerceReact, ecommerceJs, pokedex, rickAndMorty];
   const urls = [

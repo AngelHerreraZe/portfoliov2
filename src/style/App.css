@@ -207,6 +207,10 @@ a{
   font-size: 10px;
 }
 
+.Parallax-baners{
+  display: none;
+}
+
 @keyframes fadeInAndGrow {
   from {
     transform: scale(0.5);
@@ -264,12 +268,7 @@ a{
   }
 
   .work-content {
-    width: 100vw;
-    margin-top: 5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: none;
   }
 
   .card {
@@ -279,7 +278,7 @@ a{
   .galery {
     z-index: 999;
     width: 100vw;
-    height: 100vh;
+    height: 99.4vh;
   }
 
   .galery-container {
@@ -330,5 +329,12 @@ a{
     align-items: center;
     border-radius: 50%;
     cursor: pointer;
+  }
+  
+  .Parallax-baners {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
   }
 }
