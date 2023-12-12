@@ -211,6 +211,10 @@ a{
   display: none;
 }
 
+.desktop {
+  display: none;
+}
+
 @keyframes fadeInAndGrow {
   from {
     transform: scale(0.5);
@@ -331,10 +335,93 @@ a{
     cursor: pointer;
   }
   
-  .Parallax-baners {
+  .work-galery {
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .img-banner {
+    width: 80%;
+  }
+
+  .img-work-galery {
+    width: 100%;
+  }
+
+  section > div {
+    width: 60vw;
+    height: 60vh;
+    position: relative;
+    max-height: 90vh;
+    margin: 20px;
+    background: var(--white);
+    overflow: hidden;
+  }
+
+  .img-parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .progress {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--accent);
+    bottom: 100px;
+  }
+
+  section {
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    scroll-snap-align: center;
+    perspective: 500px;
+  }
+
+  ::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    background: var(--background);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    -webkit-border-radius: 1ex;
+  }
+  
+  ::-webkit-scrollbar-corner {
+    background: var(--background);
+  }
+  
+  html {
+    scroll-snap-type: y mandatory;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  h2 {
+    margin: 0;
+    color: rgb(255, 29, 29);
+    left: calc(50% + 130px);
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: -3px;
+    line-height: 1.2;
+    position: absolute;
+    border-radius: 2rem;
   }
 }

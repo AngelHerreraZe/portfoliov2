@@ -11,9 +11,7 @@ function App() {
   return (
     <main className="main-container">
       <AppNavBar work={work} setWork={setWork} />
-      <ParallaxProvider>
-        {work ? <Work /> : <About />}
-      </ParallaxProvider>
+      {work ? <Work /> : <About />}
     </main>
   );
 }
