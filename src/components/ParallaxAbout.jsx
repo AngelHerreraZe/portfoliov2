@@ -1,20 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import texts from "../assets/texts/text.json";
-import profile from "../assets/imgs/profile.png";
-import ParallaxAbout from "./ParallaxAbout";
 
-const About = () => {
-  const [isSpanish, setIsSpanish] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
+const ParallaxAbout = ({ isSpanish }) => {
+  const [scrollY, setScrollY] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY || window.pageYOffset;
+      setScrollY(currentScrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
-  if (screen.width < 876) {
-    setIsMobile(true);
-  }
-
+  const elementStyle = {
+    transform: `translate3d(0, ${scrollY}px, 0)`,
+    transition: "transform 0.3s ease",
+    opacity: 0.85,
+  };
   return (
-    <div className="about-container">
-      {isMobile ? <></> : <ParallaxAbout isSpanish={isSpanish} />}
-      <div className="first-item-about">
+    <div className="a-l-w">
+      <div className="a-lp" id="a-lp" style={elementStyle}></div>
+      <div className="first-item-aside">
         {isSpanish ? (
           <h2>{texts[0].nombre.es}</h2>
         ) : (
@@ -25,6 +33,8 @@ const About = () => {
         ) : (
           <p>{texts[0].presentacion.en}</p>
         )}
+      </div>
+      <div className="second-item-aside">
         {isSpanish ? <h2>¿Quien Soy?</h2> : <h2>Who am i?</h2>}
         {isSpanish ? (
           <p>{texts[0].quienSoy.es}</p>
@@ -32,13 +42,15 @@ const About = () => {
           <p>{texts[0].quienSoy.en}</p>
         )}
       </div>
-      <div className="second-item-about">
+      <div className="third-item-aside">
         {isSpanish ? <h2>¿Por que yo?</h2> : <h2>Why me?</h2>}
         {isSpanish ? (
           <p>{texts[0].porQueYo.es}</p>
         ) : (
           <p>{texts[0].porQueYo.en}</p>
         )}
+      </div>
+      <div className="fourt-item-aside">
         {isSpanish ? <h2>Proyectos destacados</h2> : <h2>Featured projects</h2>}
         {texts[0].proyectosDestacados.map((text) => (
           <div key={text.nombre.es}>
@@ -51,7 +63,7 @@ const About = () => {
           </div>
         ))}
       </div>
-      <div className="third-item-about">
+      <div className="third-item-aside">
         {isSpanish ? <h2>Habilidades técnicas</h2> : <h2>Technical skills</h2>}
         {isSpanish ? <h3>Frontend</h3> : <h3>Frontend</h3>}
         {isSpanish ? (
@@ -107,7 +119,7 @@ const About = () => {
           <p>{texts[0].habilidadesTecnicas.herramientasYOtros.en[2]}</p>
         )}
       </div>
-      <div className="fourt-item-about">
+      <div className="fourt-item-aside">
         {isSpanish ? <h2>¿Que busco?</h2> : <h2>What am I looking for?</h2>}
         {isSpanish ? (
           <p>{texts[0].queBusco.es}</p>
@@ -127,23 +139,8 @@ const About = () => {
           <p>{texts[0].agradecimiento.en}</p>
         )}
       </div>
-      <img src={profile} alt="" className="profile-pic" />
-      <div className="icons">
-        <a href="mailto:angelherrera1996@gmail.com" className="align-text">
-          <i className="bx bx-envelope icon"></i>
-          <p className="text-contact">angelherrera1996@gmail.com</p>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/angel-herrera-zer/"
-          target="_blank"
-          className="align-text"
-        >
-          <i className="bx bxl-linkedin icon"></i>
-          <p className="text-contact">Angel Herrera Zermeño</p>
-        </a>
-      </div>
     </div>
   );
 };
 
-export default About;
+export default ParallaxAbout;

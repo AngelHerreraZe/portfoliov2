@@ -24,13 +24,7 @@ ul{
 a{
   text-decoration: none;
   color: var(--main-text);
-}
-
-.waves {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100vw;
+  cursor: pointer;
 }
 
 .main-container {
@@ -170,13 +164,15 @@ a{
 
 .about-container {
   display: flex;
+  font-size: 1.3rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80vw;
+  width: 60vw;
   gap: 2rem;
-  margin-top: 5rem;
+  margin-top: 26vh;
   margin-bottom: 5rem;
+  margin-left: calc(50% - 40vw);
 }
 
 .profile-pic {
@@ -213,6 +209,38 @@ a{
 
 .desktop {
   display: none;
+}
+
+.first-item-about {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.second-item-about {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.third-item-about {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.fourt-item-about {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-around;
+  text-align: center;
 }
 
 @keyframes fadeInAndGrow {
@@ -298,42 +326,6 @@ a{
     position: absolute;
     left: 0;
   }
-
-  .btn-galery-minus {
-    z-index: 999999;
-    position: absolute;
-    font-size: 50px;
-    color: white;
-    left: 10rem;
-    top: 50vh;
-    width: 50px;
-    height: 50px;
-    background-color: var(--over-card-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-
-  .btn-galery-plus {
-    z-index: 999999;
-    position: absolute;
-    font-size: 50px;
-    color: white;
-    right: 10rem;
-    top: 50vh;
-    width: 50px;
-    height: 50px;
-    background-color: var(--over-card-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    cursor: pointer;
-  }
   
   .work-galery {
     margin-top: 2rem;
@@ -371,15 +363,6 @@ a{
     height: 100%;
   }
 
-  .progress {
-    position: fixed;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: var(--accent);
-    bottom: 100px;
-  }
-
   section {
     height: 100vh;
     display: flex;
@@ -415,8 +398,9 @@ a{
 
   .text-home {
     margin: 0;
-    color: rgb(255, 29, 29);
+    color: rgb(255, 255, 255);
     left: calc(50% + 130px);
+    bottom: 4rem;
     font-size: 56px;
     font-weight: 700;
     letter-spacing: -3px;
@@ -429,5 +413,56 @@ a{
     position: absolute;
     bottom: 0;
     left: 0;
+  }
+
+  .a-lp {
+    position: absolute;
+    top: 15.3446vw;
+    left: -40px;
+    width: 15vw;
+    height: 19.2308vh;
+    border: 1.34px solid rgba(255,255,255,.2);
+    opacity: 0;
+    will-change: opacity;
+  }
+
+  .a-l-w {
+    position: absolute;
+    top: 0;
+    padding-top: 15.3446vw;
+    left: calc(60px + 3.2813vw);
+    width: 9.6354vw;
+    font-size: .3rem;
+    line-height: .7011vw;
+    letter-spacing: -.02em;
+    will-change: transform;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  .first-item-aside {
+    font-size: .6rem;
+    text-align: center;
+  }
+
+  .second-item-aside {
+    font-size: .6rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .third-item-aside {
+    
+  }
+
+  .fourt-item-aside {
+
+  }
+
+  .profile-pic {
+    width: 40vw;
   }
 }
