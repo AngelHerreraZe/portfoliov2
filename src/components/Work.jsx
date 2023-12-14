@@ -7,14 +7,18 @@ import Modal from "./Modal";
 import {
   motion,
   useScroll,
-  useSpring,
   useTransform,
-  MotionValue,
 } from "framer-motion";
 
-
-
 const Work = () => {
+
+  const urls = [
+    "https://libre-mercadeo.netlify.app/",
+    "https://ecommerce-angel-isaias.netlify.app/",
+    "https://pokedex-app-ahz-ihg.netlify.app/",
+    "https://rickandmortyahz.netlify.app/",
+  ];
+
   function useParallax(value, distance) {
     return useTransform(value, [0, 1], [-distance, distance]);
   }
@@ -24,12 +28,15 @@ const Work = () => {
     const { scrollYProgress } = useScroll({ target: ref });
     const y = useParallax(scrollYProgress, 300);
     return (
-      <section>
-        <div ref={ref} >
-          <img src={id.url} alt="" className="img-parallax" onClick={() => imgClicked((id.id - 1))}/>
-        </div>
-        <motion.h2 style={{ y }}>{id.name}</motion.h2>
-      </section>
+      <a href={urls[id.id - 1]} target="_blank">
+        <section>
+          <div ref={ref} >
+            <img src={id.url} alt="" className="img-parallax" />
+          </div>
+          <motion.h2 className="text-home" style={{ y }}>{id.name}</motion.h2>
+          <p className="footer-text">{`*Click to go ->`}</p>
+        </section>
+      </a>
     );
   }
   const [modal, setModal] = useState(false);
@@ -40,14 +47,6 @@ const Work = () => {
     setModal(true);
     setImgToShow(img);
   };
-
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
-
   if (modal) {
     return (
       <Modal
@@ -74,7 +73,7 @@ const Work = () => {
         </div>
         <div className="desktop" >
           {imgArray.map((image) => (
-            <Image id={image} key={image.id} onClick={() => imgClicked(image.id)}/>
+            <Image id={image} key={image.id}/>
           ))}
         </div>
       </div>
