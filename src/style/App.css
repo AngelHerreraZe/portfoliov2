@@ -27,6 +27,27 @@ a {
   cursor: pointer;
 }
 
+.about-container {
+  display: flex;
+  font-size: 1.3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  gap: 2rem;
+  margin-top: 26vh;
+  margin-bottom: 5rem;
+  margin-left: calc(50% - 40vw);
+}
+
+.desktop {
+  display: none;
+}
+
+.mobile {
+  display: flex;
+}
+
 .main-container {
   width: 100vw;
   color: var(--main-text);
@@ -161,10 +182,6 @@ a {
   transition-duration: 1s;
 }
 
-.about-container {
-  display: none;
-}
-
 .profile-pic {
   width: 100vw;
   border-radius: 10px;
@@ -240,6 +257,14 @@ a {
     height: 15rem;
     object-fit: cover;
     border: 2px black solid;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
   }
 
   .preview-img:hover {
@@ -352,6 +377,10 @@ a {
 
   .desktop {
     display: block;
+  }
+
+  .mobile {
+    display: none;
   }
 
   .text-home {
@@ -482,16 +511,4 @@ a {
     font-size: 5px;
   }
 
-  .about-container {
-    display: flex;
-    font-size: 1.3rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 60vw;
-    gap: 2rem;
-    margin-top: 26vh;
-    margin-bottom: 5rem;
-    margin-left: calc(50% - 40vw);
-  }
 }
