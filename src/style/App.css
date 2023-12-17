@@ -454,7 +454,7 @@ a {
   .fourt-item-aside {
     font-size: 0.3rem;
     text-align: center;
-    margin-top: 10rem;
+    margin-top: 20rem;
   }
 
   .contact-aside {
@@ -516,11 +516,17 @@ a {
   .text-contact {
     font-size: 5px;
   }
-
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1860px) {
+  .second-item-aside {
+    margin-top: 17rem;
+  }
+  .third-item-aside {
+    margin-top: 22rem;
+  }
+
   .fourt-item-aside {
-    margin-top: 40rem;
-  } 
+    margin-top: 14rem;
+  }
 }
