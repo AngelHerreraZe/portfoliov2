@@ -387,8 +387,8 @@ a {
     margin: 0;
     color: rgb(255, 255, 255);
     left: calc(50% + 130px);
-    bottom: 4rem;
-    font-size: 56px;
+    bottom: 5vh;
+    font-size: 40px;
     font-weight: 700;
     letter-spacing: -3px;
     line-height: 1.2;
@@ -454,7 +454,7 @@ a {
   .fourt-item-aside {
     font-size: 0.3rem;
     text-align: center;
-    margin-top: 35rem;
+    margin-top: 10rem;
   }
 
   .contact-aside {
@@ -462,13 +462,19 @@ a {
     justify-content: space-evenly;
   }
 
-  .about-container {
+  .about-container-desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     font-size: 1.3rem;
-    width: 40vw;
+    width: 50vw;
     gap: 2rem;
     margin-top: 26vh;
     margin-bottom: 5rem;
-    margin-left: calc(50% - 40vw);
+    margin-right: calc(50% - 15vw);
+    overflow-x: hidden;
   }
 
   .first-item-about {
@@ -511,4 +517,10 @@ a {
     font-size: 5px;
   }
 
+}
+
+@media (min-width: 1920px) {
+  .fourt-item-aside {
+    margin-top: 40rem;
+  } 
 }

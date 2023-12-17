@@ -5,7 +5,7 @@ import ParallaxAbout from "./ParallaxAbout";
 const AboutDesktop = () => {
   const [isSpanish, setIsSpanish] = useState(true);
   return (
-    <div className="about-container desktop">
+    <div className="about-container-desktop desktop">
       <ParallaxAbout isSpanish={isSpanish} />
       <div className="first-item-about">
         {isSpanish ? (
